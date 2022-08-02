@@ -4,7 +4,7 @@ function conectarBD(){
     $servidor="ls-09e393cc458d8c9984b7ce26cc0c199c2bf93ce5.cfv20klo2ytv.us-east-1.rds.amazonaws.com";
     $baseDatos="sis_venta";
     $usuario="dbmasteruser";
-    $contra="n.cf^AgcyiETV(?t==*1}6F[Ky`uwV$G";
+    $contra="SoyForaneo27";
   
     $conexion= mysqli_connect($servidor,$usuario,$contra,$baseDatos) or die ("No se pudo conectar");
   
@@ -73,7 +73,7 @@ class Bot
     }
 
     public function provedores(){
-        $conexion = new mysqli("ls-09e393cc458d8c9984b7ce26cc0c199c2bf93ce5.cfv20klo2ytv.us-east-1.rds.amazonaws.com","dbmasteruser","n.cf^AgcyiETV(?t==*1}6F[Ky`uwV$G","sis_venta");
+        $conexion = new mysqli("ls-09e393cc458d8c9984b7ce26cc0c199c2bf93ce5.cfv20klo2ytv.us-east-1.rds.amazonaws.com","dbmasteruser","SoyForaneo27","sis_venta");
             $query="select proveedor from proveedor";
             $resultado=$conexion->query($query);
             while($row=$resultado->fetch_assoc()){
