@@ -22,7 +22,7 @@ if (isset($_GET['msg'])) {
         if ($msg == 'Consultar Ticket' || $msg == "1") {
             $botty->reply('Digita tu número de ticket: ');
         } elseif($msg == 'tus proveedores son?' || $msg == "2"){
-            $conexion = new mysqli("ls-09e393cc458d8c9984b7ce26cc0c199c2bf93ce5.cfv20klo2ytv.us-east-1.rds.amazonaws.com","dbmasteruser","n.cf^AgcyiETV(?t==*1}6F[Ky`uwV$G","sis_venta");
+            $conexion = new mysqli("ls-09e393cc458d8c9984b7ce26cc0c199c2bf93ce5.cfv20klo2ytv.us-east-1.rds.amazonaws.com","dbmasteruser","SoyForaneo27","sis_venta");
             $query="select proveedor from proveedor";
             $resultado=$conexion->query($query);
             echo "Mis provedores son: ";
@@ -40,7 +40,7 @@ if (isset($_GET['msg'])) {
         } elseif($msg == 'tienes gansitos?' || $msg == 'tienes coca cola?' || $msg == 'tienes mantecadas?' || $msg == 'tienes chetos?' || $msg == 'tienes Gansitos?' || $msg == 'Tienes gansito?'){
             $botty->reply('Claro que tenemos, acude a nuestra sucursal más cercana');
         } elseif (is_numeric($msg) && $msg != 1 && $msg != 2  && $msg != 3 && $msg != 4 && $msg != 5 && $msg != 6 && $msg != 7 && $msg != 8){
-            $conexion = new mysqli("ls-09e393cc458d8c9984b7ce26cc0c199c2bf93ce5.cfv20klo2ytv.us-east-1.rds.amazonaws.com","dbmasteruser","n.cf^AgcyiETV(?t==*1}6F[Ky`uwV$G","sis_venta");
+            $conexion = new mysqli("ls-09e393cc458d8c9984b7ce26cc0c199c2bf93ce5.cfv20klo2ytv.us-east-1.rds.amazonaws.com","dbmasteruser","SoyForaneo27","sis_venta");
             $query="select * from ventaseshas where idVenta = $msg";
             $resultado=$conexion->query($query);
             $row=$resultado->fetch_assoc();
